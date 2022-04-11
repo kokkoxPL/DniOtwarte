@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/logo-medium.png" />
+		<link rel="stylesheet" href="style/quiz.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<title>quiz o ZSTiO</title>
+	</head>
+	<body>
+		<div class="menu">
+			<ul>
+				<li><a href="/"> POWRÓT NA STRONĘ GŁÓWNĄ</a></li>
+			</ul>
+		</div>
+
+		<div class="item-1"></div>
+		<div class="item-2"></div>
+		<div class="item-3"></div>
+		<div class="item-4"></div>
+		<div class="item-5"></div>
+		<div class="item-6"></div>
+		<div class="item-7"></div>
+
+		<div class="border-line1" id="line1"></div>
+		<div class="border-line2" id="line2"></div>
+
+		<form action="/quiz" method="post">
+			<div class="formularz" id="formularz">
+				<div class="form_content">
+					<h1>WPROWADŹ DANE, ABY ROZPOCZĄĆ QUIZ O NASZEJ SZKOLE</h1>
+				</div>
+				<div class="line"></div>
+				<div class="form">
+					<input type="text" placeholder="Imię i nazwisko (opcjonalnie)" class="dane" name="dane" /><br />
+
+					<input type="text" placeholder="Pseudonim" class="dane" name="nick" id="nickName" /><br />
+
+					<input type="text" placeholder="Szkoła" class="dane" name="szkola" /><br />
+
+					<input type="text" placeholder="Miejscowość" class="dane" name="miejsce" /><br />
+
+					<input type="button" value="Prześlij" class="send" id="send" onclick="verify()" />
+				</div>
+			</div>
+
+			<div class="quiz" id="quiz" style="display: none">
+				<div class="q-1 questions" id="q-1">
+					<h1>Pytanie 1</h1>
+					<p>Ile jest osób w sali 32?</p>
+					<div class="answers">
+						<ul>
+
+							<li>
+								<label><input type="radio" name="answer1" class="in-radio" value="0" />12</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer1" class="in-radio" value="0" />10</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer1" class="in-radio" value="0" />2</label>
+							</li>
+							
+							<li>
+								<label><input type="radio" name="answer1" class="in-radio" value="1" />15</label>
+							</li>
+						</ul>
+
+						<div class="buttons">
+							<input type="button" value="Następne" onclick="question2()" class="next" />
+						</div>
+					</div>
+				</div>
+
+				<div class="q-2 questions" id="q-2">
+					<h1>Pytanie 2</h1>
+					<p>Jaki jest wzór na drzwiach w sali 36?</p>
+					<div class="answers">
+						<ul>
+
+							<li>
+								<label><input type="radio" name="answer2" class="in-radio" value="0" />Δ=b<sup>2</sup>-4ac</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer2" class="in-radio" value="0" />P=a<sup>2</sup></label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer2" class="in-radio" value="1" />E=mc<sup>2</sup></label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer2" class="in-radio" value="0" />OBJ= a<sup>3</sup></label>
+							</li>
+						</ul>
+
+						<div class="buttons">
+							<input type="button" value="Poprzednie" onclick="question1()" class="prev" />
+							<input type="button" value="Następne" onclick="question3()" class="next" />
+						</div>
+					</div>
+				</div>
+
+				<div class="q-3 questions" id="q-3">
+					<h1>Pytanie 3</h1>
+					<p>Czy na końcu korytarza jest plakat Technika grafiki i poligrafii cyfrowej?</p>
+					<div class="answers">
+						<ul>
+							<li>
+								<label><input type="radio" name="answer3" class="in-radio" value="1" />TAK</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer3" class="in-radio" value="0" />NIE</label>
+							</li>
+						</ul>
+
+						<div class="buttons">
+							<input type="button" value="Poprzednie" onclick="question2()" class="prev" />
+							<input type="button" value="Następne" onclick="question4()" class="next" />
+						</div>
+					</div>
+				</div>
+
+				<div class="q-4 questions" id="q-4">
+					<h1>Pytanie 4</h1>
+					<p>W jakiej sali jest znak CISCO?</p>
+					<div class="answers">
+						<ul>
+							<li>
+								<label><input type="radio" name="answer4" class="in-radio" value="0" />w sali 33</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer4" class="in-radio" value="0" />w sali 36</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer4" class="in-radio" value="1" />w sali 35</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer4" class="in-radio" value="0" />w sali 37</label>
+							</li>
+						</ul>
+
+						<div class="buttons">
+							<input type="button" value="Poprzednie" onclick="question3()" class="prev" />
+							<input type="button" value="Następne" onclick="question5()" class="next" />
+						</div>
+					</div>
+				</div>
+
+				<div class="q-5 questions" id="q-5">
+					<h1>Pytanie 5</h1>
+					<p>W których salach nie są włączone projektory?</p>
+					<div class="answers">
+						<ul>
+							<li>
+								<label><input type="radio" name="answer5" class="in-radio" value="0" />w sali 33 i 36</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer5" class="in-radio" value="1" />w sali 36 i 37</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer5" class="in-radio" value="0" />w sali 35 i 34</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer5" class="in-radio" value="0" />w sali 37 i 34</label>
+							</li>
+						</ul>
+
+						<div class="buttons">
+							<input type="button" value="Poprzednie" onclick="question4()" class="prev" />
+							<input type="button" value="Następne" onclick="question6()" class="next" />
+						</div>
+					</div>
+				</div>
+
+				<div class="q-6 questions" id="q-6">
+					<h1>Pytanie 6</h1>
+					<p>Ile jest gaśnic na korytarzu ?</p>
+					<div class="answers">
+						<ul>
+							<li>
+								<label><input type="radio" name="answer6" class="in-radio" value="0" />0</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer6" class="in-radio" value="0" />1</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer6" class="in-radio" value="1" />2</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer6" class="in-radio" value="0" />3</label>
+							</li>
+						</ul>
+
+						<div class="buttons">
+							<input type="button" value="Poprzednie" onclick="question5()" class="prev" />
+							<input type="button" value="Następne" onclick="question7()" class="next" />
+						</div>
+					</div>
+				</div>
+
+				<div class="q-7 questions" id="q-7">
+					<h1>Pytanie 7</h1>
+					<p>W której sali jest napis "Technik grafikii i poligrafii cyfrowej"?</p>
+					<div class="answers">
+						<ul>
+							<li>
+								<label><input type="radio" name="answer7" class="in-radio" value="0" />w sali 36</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer7" class="in-radio" value="0" />w sali 34</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer7" class="in-radio" value="1" />w sali 37</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer7" class="in-radio" value="0" />w sali 33</label>
+							</li>
+						</ul>
+
+						<div class="buttons">
+							<input type="button" value="Poprzednie" onclick="question6()" class="prev" />
+							<input type="button" value="Następne" onclick="question8()" class="next" />
+						</div>
+					</div>
+				</div>
+
+				<div class="q-8 questions" id="q-8">
+					<h1>Pytanie 8</h1>
+					<p>Jakiego koloru znajduje się plakat na drzwiach do sali 33?</p>
+					<div class="answers">
+						<ul>
+							<li>
+								<label><input type="radio" name="answer8" class="in-radio" value="1" />Różowego</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer8" class="in-radio" value="0" />Żółtego</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer8" class="in-radio" value="0" />Zielonego</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer8" class="in-radio" value="0" />Białego</label>
+							</li>
+						</ul>
+
+						<div class="buttons">
+							<input type="button" value="Poprzednie" onclick="question7()" class="prev" />
+							<input type="button" value="Następne" onclick="question9()" class="next" />
+						</div>
+					</div>
+				</div>
+
+				<div class="q-9 questions" id="q-9">
+					<h1>Pytanie 9</h1>
+					<p>W jednej z sali ukrył się polityk, w której?</p>
+					<div class="answers">
+						<ul>
+							<li>
+								<label><input type="radio" name="answer9" class="in-radio" value="0" />w sali 35</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer9" class="in-radio" value="0" />w sali 37</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer9" class="in-radio" value="1" />w sali 32</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer9" class="in-radio" value="0" />w sali 34</label>
+							</li>
+						</ul>
+
+						<div class="buttons">
+							<input type="button" value="Poprzednie" onclick="question8()" class="prev" />
+							<input type="button" value="Następne" onclick="question10()" class="next" />
+						</div>
+					</div>
+				</div>
+
+				<div class="q-10 questions" id="q-10">
+					<h1>Pytanie 10</h1>
+					<p>Ile jest klimatyzatorów w sali 33?</p>
+					<div class="answers">
+						<ul>
+							<li>
+								<label><input type="radio" name="answer10" class="in-radio" value="0" />0</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer10" class="in-radio" value="0" />1</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer10" class="in-radio" value="1" />2</label>
+							</li>
+
+							<li>
+								<label><input type="radio" name="answer10" class="in-radio" value="0" />3</label>
+							</li>
+						</ul>
+
+						<div class="buttons">
+							<input type="button" value="Poprzednie" onclick="question9()" class="prev" />
+							<input type="submit" value="Zakończ" class="send end" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<script src="scripts/quiz.js"></script>
+	</body>
+</html>

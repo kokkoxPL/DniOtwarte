@@ -1,0 +1,443 @@
+@import url(//fonts.googleapis.com/css?family=Montserrat);
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
+* {
+  font-family: "Montserrat", "Arial";
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.icon-menu {
+  position: absolute;
+  width: 40px;
+  height: auto;
+  color: black;
+  top: 1%;
+  right: 1%;
+  z-index: 3;
+}
+
+@media screen and (max-width: 1920px) {
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1 {
+    position: absolute;
+    left: 2%;
+    top: 25%;
+    z-index: -1;
+  }
+
+  h1 span:nth-child(1) {
+    font-size: 80px;
+  }
+  h1 span:nth-child(3) {
+    color: rgb(175, 9, 0);
+    font-size: 75px;
+    letter-spacing: 5px;
+    font-weight: 900;
+    font-family: "Major Mono Display", monospace;
+  }
+  .menu {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: rgb(175, 9, 0);
+    margin: auto;
+    z-index: 2;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(1);
+    grid-template-rows: repeat(4, fit-content);
+    row-gap: 30px;
+    margin-left: 30px;
+    margin-top: 80px;
+  }
+  li {
+    list-style: none;
+    margin: 20px 30px;
+  }
+  .header ul li a {
+    text-decoration: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 20px;
+    transition: 0.5s;
+  }
+
+  .header ul li a:hover {
+    border-bottom: 2px solid white;
+    letter-spacing: 3px;
+  }
+
+  .type {
+    position: absolute;
+    top: 55%;
+    left: 2%;
+    font-size: 50px;
+
+    display: flex;
+    justify-content: left;
+  }
+
+  .typewriter h3 {
+    color: black;
+    font-family: "Montserrat", "Arial";
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: typing 1.5s steps(20, end), bg 2s 2s both;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes bg {
+    40% {
+      background: rgba(175, 9, 0);
+      padding: 30px 60px;
+      position: absolute;
+      top: 60%;
+    }
+
+    70% {
+      background: rgba(175, 9, 0);
+      padding: 10px 30px;
+      position: absolute;
+      top: 57%;
+    }
+
+    100% {
+      background: rgba(175, 9, 0);
+      padding: 10px 30px;
+      box-shadow: 8px 8px 24px 0px rgba(175, 9, 0);
+      border-radius: 20px;
+      color: white;
+    }
+  }
+
+  .item-1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-left: 5px dashed transparent;
+    border-bottom: 5px dashed transparent;
+    position: absolute;
+    top: 15%;
+    right: 2%;
+    animation: spin 2s linear infinite;
+
+    z-index: -2;
+  }
+  .item-3 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-top: 5px dashed black;
+    border-right: 5px dashed black;
+    border-left: 5px dashed transparent;
+    border-bottom: 5px dashed transparent;
+    position: absolute;
+    top: 54%;
+    right: 50%;
+    animation: spin 4s linear infinite;
+
+    z-index: -2;
+  }
+
+  .item-4 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-top: 5px dashed black;
+    border-right: 5px dashed black;
+    border-left: 5px dashed transparent;
+    border-bottom: 5px dashed transparent;
+    position: absolute;
+    top: 17%;
+    right: 3%;
+    animation: spin2 2s linear infinite;
+
+    z-index: -2;
+  }
+
+  .item-5 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: 5px dashed black;
+    border-right: 5px dashed black;
+    border-left: 5px dashed transparent;
+    border-bottom: 5px dashed transparent;
+    position: absolute;
+    top: 57%;
+    right: 51%;
+    animation: spin2 2s linear infinite;
+
+    z-index: -2;
+  }
+
+  .item-6 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: 5px dashed black;
+    border-right: 5px dashed black;
+    border-left: 5px dashed transparent;
+    border-bottom: 5px dashed transparent;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    animation: spin2 2s linear infinite;
+
+    z-index: -2;
+  }
+
+  .item-8 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: 5px dashed black;
+    border-right: 5px dashed black;
+    border-left: 5px dashed transparent;
+    border-bottom: 5px dashed transparent;
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+    animation: spin2 2s linear infinite;
+
+    z-index: -2;
+  }
+
+  .item-9 {
+    width: 60px;
+    height: 60px;
+    border: 5px dashed black;
+    position: absolute;
+    top: 20%;
+    left: 73%;
+    animation: spin2 9s linear infinite;
+
+    z-index: -2;
+  }
+  .item-10 {
+    width: 80px;
+    height: 80px;
+    border: 5px dashed black;
+    position: absolute;
+    top: 15%;
+    left: 11%;
+    animation: spin 8s linear infinite;
+
+    z-index: -2;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin2 {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .image {
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+
+  .Banach {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+  }
+
+  .history {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+  }
+
+  .history h1 {
+    position: relative;
+    top: 0;
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .history p {
+    font-size: 25px;
+    text-align: justify;
+    width: 90%;
+  }
+
+  .content {
+    width: 100%;
+    height: 75%;
+    position: absolute;
+    top: 105%;
+  }
+  #block {
+    position: absolute;
+    width: 98%;
+    height: 102%;
+    padding: 1% 0;
+    top: -2%;
+    left: -100%;
+    background: rgb(56, 3, 0);
+  }
+
+  .social-icons {
+    position: absolute;
+    bottom: 5%;
+    left: 40%;
+    margin: auto;
+    font-size: 30px;
+    display: flex;
+  }
+
+  .icon-facebook-circled:hover {
+    color: rgb(255, 255, 255);
+  }
+  .icon-youtube-play:hover {
+    color: rgb(255, 255, 255);
+  }
+  .icon-instagram:hover {
+    color: rgb(255, 255, 255);
+  }
+  .icon-address-card-o:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  .icon {
+    transition: 0.5s;
+    color: black;
+    text-decoration: none;
+
+    z-index: 3;
+
+    display: grid;
+    column-gap: 30px;
+    padding: 10px;
+  }
+  .social {
+    position: absolute;
+    height: 280px;
+    width: 40px;
+    top: 35%;
+    right: 0;
+    margin: 5px;
+  }
+  iframe {
+    position: absolute;
+    top: 51%;
+    right: 8%;
+  }
+
+  .fb {
+    background: linear-gradient(45deg, rgba(55,153,215,1) 0%, rgba(0,60,98,1) 100%);
+    color: white;
+    width: 400px;
+    margin-right: 100px;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 80%;
+    right: 4%;
+
+    z-index: 2;
+  }
+
+  .yt {
+    background: linear-gradient(45deg, rgba(215,55,55,1) 0%, rgba(85,0,0,1) 100%);
+    color: #ffffff;
+    width: 400px;
+    margin-right: 100px;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 80%;
+    right: 4%;
+
+    z-index: 2;
+  }
+
+  .ig {
+    background: linear-gradient(45deg, rgb(248, 159, 33), rgba(253,29,29,1), rgba(131,58,180,1));
+    color: white;
+    width: 400px;
+    margin-right: 100px;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 80%;
+    right: 4%;
+
+    z-index: 2;
+  }
+
+  .sc {
+    background: rgb(117, 0, 0);
+    color: white;
+    width: 400px;
+    margin-right: 100px;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 60%;
+    right: 4%;
+
+    z-index: 2;
+  }
+
+  .s-t {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+}
+.comment{
+  position: absolute;
+  top:0;
+  right: 70px;
+  font-size: 20px;
+}

@@ -1,0 +1,286 @@
+@import url(//fonts.googleapis.com/css?family=Montserrat);
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
+body {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+*{
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+li {
+	list-style: none;
+	margin: 20px 0;
+}
+ul li a {
+	text-decoration: none;
+	padding: 15px 30px;
+	color: black;
+	font-size: 20px;
+	transition: 0.5s;
+}
+ul li a:hover {
+	color: rgba(175, 9, 0);
+	letter-spacing: 2px;
+	font-weight: 900;
+}
+
+.formularz {
+	width: 80%;
+	height: 65%;
+	padding: 2% 0;
+	background: rgba(175, 9, 0);
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 40% 3px 60%;
+}
+
+.dane {
+	width: 500px;
+	height: 40px;
+	background: none;
+	color: white;
+	border: none;
+	border-bottom: 2px solid white;
+	font-size: 30px;
+	margin: 40px 0;
+
+	transition: 0.5s;
+}
+.dane::placeholder {
+	color: white;
+	text-align: center;
+	border: none;
+}
+.dane:hover {
+	background: darkred;
+}
+
+.send {
+	background: none;
+	border: none;
+	border: 2px solid white;
+	color: white;
+	padding: 10px 30px;
+	transition: 0.5s;
+}
+
+.send:hover {
+	background: white;
+	color: rgba(175, 9, 0);
+}
+.line {
+	width: 100%;
+	height: 100%;
+	background: white;
+}
+.form_content {
+	letter-spacing: 3px;
+	font-weight: 900;
+	font-size: 20px;
+	color: white;
+}
+
+.item-1 {
+	z-index: -1;
+	width: 260px;
+	height: 260px;
+	border-radius: 50%;
+	border-top: 5px dashed purple;
+	border-right: 5px dashed purple;
+	border-left: 5px dashed transparent;
+	border-bottom: 5px dashed transparent;
+	position: absolute;
+	top: 55%;
+	left: 5%;
+	animation: spin 8s linear infinite;
+}
+
+.item-2 {
+	z-index: -1;
+	width: 260px;
+	height: 260px;
+	border-radius: 50%;
+	border-top: 5px dashed purple;
+	border-right: 5px dashed purple;
+	border-left: 5px dashed transparent;
+	border-bottom: 5px dashed transparent;
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	animation: spin2 8s linear infinite;
+}
+
+.item-3 {
+	z-index: -1;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border-top: 1px dashed purple;
+	border-right: 1px dashed purple;
+	border-left: 5px dashed transparent;
+	border-bottom: 5px dashed transparent;
+	position: absolute;
+	top: 80%;
+	right: 5%;
+	animation: spin2 4s linear infinite;
+}
+
+.item-4 {
+	z-index: -1;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	border-top: 3px dashed black;
+	border-right: 3px dashed black;
+	border-left: 5px dashed transparent;
+	border-bottom: 5px dashed transparent;
+	position: absolute;
+	top: 10%;
+	left: 8%;
+	animation: spin2 4s linear infinite;
+}
+
+.item-5 {
+	z-index: -1;
+	width: 200px;
+	height: 200px;
+	border: 4px dashed rgb(134, 19, 134);
+	position: absolute;
+	top: 60%;
+	left: 60%;
+	animation: spin2 8s linear infinite;
+}
+
+.item-6 {
+	z-index: -1;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	border-top: 3px dashed purple;
+	border-right: 3px dashed purple;
+	border-left: 5px dashed transparent;
+	border-bottom: 5px dashed transparent;
+	position: absolute;
+	top: 60%;
+	left: 25%;
+	animation: spin2 8s linear infinite;
+}
+.item-7 {
+	z-index: -1;
+	width: 100px;
+	height: 100px;
+	border: 4px dashed black;
+	position: absolute;
+	top: 50%;
+	right: 7%;
+	animation: spin2 4s linear infinite;
+}
+
+.border-line1 {
+	width: 300px;
+	height: 200px;
+	z-index: -1;
+	background: black;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	margin: -4px 0 0 -4px;
+}
+.border-line2 {
+	width: 300px;
+	height: 200px;
+	z-index: -1;
+	background: black;
+	position: absolute;
+	bottom: 17%;
+	right: 10%;
+	margin: 0 -4px -4px 0;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin2 {
+	0% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.questions {
+	width: 70%;
+	height: 40%;
+	align-items: center;
+	padding: 2% 0;
+	background: rgba(175, 9, 0);
+	color: white;
+	margin: auto;
+	border-radius: 30px;
+	position: absolute;
+	left: 15%;
+	top: 25%;
+}
+.questions h1 {
+	font-size: 50px;
+	text-align: center;
+}
+.questions p {
+	font-size: 25px;
+	margin-left: 80px;
+}
+label {
+	padding: 10px 20px;
+	transition: 0.5s;
+	margin-left: 80px;
+	font-size: 25px;
+}
+label:hover {
+	background: darkred;
+	border-radius: 10px;
+}
+
+.prev {
+	color: white;
+	background: none;
+	border: 2px solid white;
+	padding: 10px 20px;
+	transition: 0.5s;
+}
+.prev:hover {
+	background: white;
+	color: darkred;
+}
+
+.next {
+	color: white;
+	background: none;
+	border: 2px solid white;
+	padding: 10px 20px;
+	transition: 0.5s;
+}
+.next:hover {
+	background: white;
+	color: darkred;
+}
+
+.buttons {
+	position: absolute;
+	bottom: 2%;
+	right: 10%;
+}
